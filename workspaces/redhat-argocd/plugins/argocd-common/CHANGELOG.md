@@ -1,5 +1,17 @@
 # @backstage-community/plugin-redhat-argocd-common
 
+## 1.0.5
+
+### Patch Changes
+
+- 38d858e: regen yarn.lock
+
+## 1.0.4
+
+### Patch Changes
+
+- 576a2d1: chore: update supported-versions to 1.29.2
+
 ## 1.0.3
 
 ### Patch Changes
