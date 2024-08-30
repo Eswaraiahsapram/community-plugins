@@ -42,7 +42,7 @@ const useDrawerStyles = makeStyles<Theme>(theme =>
       fontSize: 20,
     },
     paper: {
-      width: '75%',
+      width: '50%',
       padding: theme.spacing(2.5),
       gap: '3%',
     },
@@ -192,6 +192,19 @@ const DeploymentLifecycleDrawer: React.FC<DeploymentLifecycleDrawerProps> = ({
               )}
             </Grid>
           )}
+          <Grid item xs={12}>
+            <Typography color="textPrimary">Resources</Typography>
+            <Card
+              elevation={2}
+              key="resoucres-container"
+              style={{ padding: '25px', marginTop: '10px' }}
+            >
+              <ResourcesTable
+                resources={app?.status?.resources || []}
+                createdAt={createdAt}
+              />
+            </Card>
+          </Grid>
           {appHistory.length >= 1 && (
             <Grid item xs={12}>
               <Typography color="textPrimary">Latest deployment</Typography>
@@ -297,21 +310,6 @@ const DeploymentLifecycleDrawer: React.FC<DeploymentLifecycleDrawerProps> = ({
               </Box>
             </Grid>
           )}
-          <Grid item xs={12}>
-            <Typography variant="h6" color="textPrimary">
-              Resources
-            </Typography>
-            <Card
-              elevation={2}
-              key="resoucres-container"
-              style={{ padding: '25px' }}
-            >
-              <ResourcesTable
-                resources={app?.status?.resources || []}
-                createdAt={createdAt}
-              />
-            </Card>
-          </Grid>
         </Grid>
       </CardContent>
     </Drawer>

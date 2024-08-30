@@ -190,3 +190,5 @@ export interface Resource {
   health: Health;
   group?: string;
 }
+
+export type HealthStatusType = keyof typeof HealthStatus;

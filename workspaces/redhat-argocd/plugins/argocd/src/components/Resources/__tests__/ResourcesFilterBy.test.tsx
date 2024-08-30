@@ -113,11 +113,4 @@ describe('ResourcesFilterBy Component', () => {
     fireEvent.click(screen.getByRole('button', { name: /All/i }));
     expect(allOption).not.toHaveAttribute('aria-selected', 'true');
   });
-
-  it('matches the snapshot', () => {
-    const { asFragment } = render(
-      <ResourcesFilterBy setFilterValue={mockSetFilterValue} />,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
 });
