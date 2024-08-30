@@ -1,6 +1,6 @@
 {
   "name": "@backstage-community/plugin-feedback",
-  "version": "1.6.1",
+  "version": "1.6.3",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "license": "Apache-2.0",
@@ -11,7 +11,7 @@
   },
   "backstage": {
     "role": "frontend-plugin",
-    "supported-versions": "1.28.4",
+    "supported-versions": "1.29.2",
     "pluginId": "feedback",
     "pluginPackages": [
       "@backstage-community/plugin-feedback",
@@ -53,7 +53,7 @@
     "@backstage/core-app-api": "1.14.1",
     "@backstage/dev-utils": "1.0.36",
     "@backstage/test-utils": "1.5.9",
-    "@janus-idp/cli": "1.13.0",
+    "@janus-idp/cli": "1.13.1",
     "@redhat-developer/red-hat-developer-hub-theme": "0.0.54",
     "@testing-library/jest-dom": "6.4.8",
     "@testing-library/react": "14.3.1",
@@ -64,7 +64,7 @@
     "react-router-dom": "^6.26.1"
   },
   "files": [
-    "app-config.janus-idp.yaml",
+    "app-config.backstage-community.yaml",
     "dist",
     "config.d.ts",
     "dist-scalprum"
