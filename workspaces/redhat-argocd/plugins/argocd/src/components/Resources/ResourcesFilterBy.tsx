@@ -10,7 +10,7 @@ import {
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-import { HealthStatus } from '../../types';
+import { HealthStatus, HealthStatusType } from '../../types';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -74,7 +74,7 @@ export const ResourcesFilterBy: React.FC<ResourcesFilterByProps> = ({
       >
         <FilterAltIcon />
         <Typography variant="body1" className={classes.filterLabel}>
-          {selectedOption || 'Filter by'}
+          {selectedOption ?? 'Filter by'}
         </Typography>
         <ArrowDropDownIcon />
       </Button>
@@ -105,16 +105,15 @@ export const ResourcesFilterBy: React.FC<ResourcesFilterByProps> = ({
         </MenuItem>
         {Object.keys(HealthStatus).map(statusKey => (
           <MenuItem
-            key={HealthStatus[statusKey as keyof typeof HealthStatus]}
+            key={HealthStatus[statusKey as HealthStatusType]}
             selected={
-              selectedOption ===
-              HealthStatus[statusKey as keyof typeof HealthStatus]
+              selectedOption === HealthStatus[statusKey as HealthStatusType]
             }
             onClick={() =>
-              handleClose(HealthStatus[statusKey as keyof typeof HealthStatus])
+              handleClose(HealthStatus[statusKey as HealthStatusType])
             }
           >
-            {HealthStatus[statusKey as keyof typeof HealthStatus]}
+            {HealthStatus[statusKey as HealthStatusType]}
           </MenuItem>
         ))}
       </Menu>

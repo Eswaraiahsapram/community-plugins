@@ -63,7 +63,7 @@ export const ResourcesTableRow: React.FC<ResourcesTableRowProps> = ({
         {row.kind}
       </TableCell>
       <TableCell className={classes.tableCell} align="left">
-        {moment.utc(createdAt).local().format('MM/DD/YYYY hh:mm a [EDT]')}
+        {moment.utc(createdAt).local().format('MM/DD/YYYY hh:mm a')}
       </TableCell>
       <TableCell className={classes.tableCell} align="left">
         <ResourceSyncStatus syncStatus={row.status} />
